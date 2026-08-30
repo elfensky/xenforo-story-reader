@@ -9,6 +9,21 @@ forum discussion between chapters shown inline as comments under each chapter.
 Works on Questionable Questing, SpaceBattles, and Sufficient Velocity (any XenForo forum
 with threadmarks — all selectors live in one Adapter).
 
+## What it looks like
+
+The reader, opened on a SpaceBattles story — chapter TOC on the left, chapter as the focus:
+
+![Reader in dark mode](screenshots/reader-dark.png)
+
+The forum posts between two chapters, collected as comments under the chapter, behind a
+sticky section bar:
+
+![Inline discussion](screenshots/discussion.png)
+
+| Without the reader | Light theme |
+|---|---|
+| ![The raw forum thread](screenshots/forum-before.png) | ![Reader in light mode](screenshots/reader-light.png) |
+
 ## Install
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/) (or Violentmonkey/Greasemonkey).
