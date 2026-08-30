@@ -1,5 +1,7 @@
 # XenForo Story Reader
 
+[![Install](https://img.shields.io/badge/%E2%96%BC%20Install%20userscript-Tampermonkey-2ea44f?style=for-the-badge)](https://raw.githubusercontent.com/elfensky/xenforo-story-reader/main/xenforo-story-reader.user.js)
+
 A Tampermonkey userscript that turns a threadmarked XenForo story thread into an
 AO3/FFN-style reader: chapter table of contents, the chapter body as the focus, and the
 forum discussion between chapters shown inline as comments under each chapter.
@@ -9,9 +11,11 @@ with threadmarks — all selectors live in one Adapter).
 
 ## Install
 
-1. Install [Tampermonkey](https://www.tampermonkey.net/).
-2. Open [`xenforo-story-reader.user.js`](https://github.com/elfensky/xenforo-story-reader/raw/main/xenforo-story-reader.user.js) — Tampermonkey offers to install it.
+1. Install [Tampermonkey](https://www.tampermonkey.net/) (or Violentmonkey/Greasemonkey).
+2. Click the **Install** button above — the extension opens its install screen.
 3. Open a threadmarked story thread; a floating **Reader** button appears bottom-right.
+
+Updates ship through the script's `@updateURL`, so installs stay current automatically.
 
 ## Features
 

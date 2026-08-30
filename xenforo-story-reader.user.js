@@ -4,6 +4,10 @@
 // @version      0.7.2
 // @description  Reformats threadmarked XenForo story threads into an AO3-style reader: chapter TOC, inline discussion, persistent cache, EPUB export.
 // @author       elfensky
+// @homepageURL  https://github.com/elfensky/xenforo-story-reader
+// @supportURL   https://github.com/elfensky/xenforo-story-reader/issues
+// @downloadURL  https://raw.githubusercontent.com/elfensky/xenforo-story-reader/main/xenforo-story-reader.user.js
+// @updateURL    https://raw.githubusercontent.com/elfensky/xenforo-story-reader/main/xenforo-story-reader.user.js
 // @match        https://forum.questionablequesting.com/threads/*
 // @match        https://questionablequesting.com/threads/*
 // @match        https://forums.spacebattles.com/threads/*
