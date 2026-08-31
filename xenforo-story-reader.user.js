@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         XenForo Story Reader (AO3-style)
 // @namespace    xfreader.local
-// @version      0.7.3
+// @version      0.7.4
 // @description  Reformats threadmarked XenForo story threads into an AO3-style reader: chapter TOC, inline discussion, persistent cache, EPUB export.
 // @author       elfensky
 // @homepageURL  https://github.com/elfensky/xenforo-story-reader
@@ -403,4 +403,6 @@ function mountLauncher(){
 }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',mountLauncher);
 else mountLauncher();
+/* test hook: exposes internals to vitest; inert unless the runner sets the flag first */
+if(globalThis.__XFR_TEST__) globalThis.__xfr={Net,Adapter,Cache,Store,crc32,makeZip,esc,bodyToXhtml,buildEpub,mountLauncher};
 })();

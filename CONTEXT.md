@@ -1,4 +1,4 @@
-# XenForo Story Reader — Handoff Context (v0.7.3)
+# XenForo Story Reader — Handoff Context (v0.7.4)
 
 ## What this is
 A Tampermonkey **userscript** that turns a threadmarked XenForo forum story thread into an
@@ -138,7 +138,8 @@ v0.6.0 two view modes + footer nav + light-mode fix + sticky full-width discbar.
 always-auto-load discussion. v0.7.0 refactor (Net/Adapter/Cache/Store) + whole-story EPUB
 export. v0.7.1 icon footer + tooltips + green EPUB button moved into footer. v0.7.2 sticky
 discussion bar repositioned below story (scroll-up/pin/release). v0.7.3 launcher moved to
-bottom-left + drag-to-move with persisted position.
+bottom-left + drag-to-move with persisted position. v0.7.4 test harness (vitest unit+smoke,
+CDP e2e, CI) + inert test hook exposing internals.
 
 ## ROADMAP (agreed next)
 1. In-chapter scroll progress + read/unread state.

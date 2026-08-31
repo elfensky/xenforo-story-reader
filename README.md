@@ -51,6 +51,18 @@ Updates ship through the script's `@updateURL`, so installs stay current automat
 
 Single file, no build step. Architecture and selector notes: [CONTEXT.md](CONTEXT.md).
 
+Tests (vitest + happy-dom; the script exposes its internals via a test hook that is inert
+in the browser):
+
+```sh
+npm install
+npm test        # unit (adapter parsing, EPUB pipeline) + smoke (metadata block)
+npm run e2e     # injects into a real thread via a local chrome-devtools daemon
+```
+
+Unit and smoke run in CI on every push; e2e is machine-local (it needs a logged-in
+Chrome with CDP — see the header of [e2e/run.sh](e2e/run.sh)).
+
 ## License
 
 MIT
