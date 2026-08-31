@@ -1,4 +1,4 @@
-# XenForo Story Reader — Handoff Context (v0.7.2)
+# XenForo Story Reader — Handoff Context (v0.7.3)
 
 ## What this is
 A Tampermonkey **userscript** that turns a threadmarked XenForo forum story thread into an
@@ -53,7 +53,7 @@ the forum discussion as comments under each chapter."
   chronological), icon footer nav, sticky discussion bar, auto-loaded discussion with a
   stale-guard token, skeletons, aggressive background prefetch, EPUB export.
 - **Bootstrap** — mounts a floating "Reader" launcher button, gated on hasThreadmarks().
-  Launcher lives fixed bottom-right (~1305,829 at 1370px width). NOTE: the site also has
+  Launcher lives fixed bottom-LEFT by default (v0.7.3 — bottom-right blocked cookie-banner close buttons) and is draggable; position persists in localStorage (xfReader:launch). NOTE: the site also has
   NATIVE XenForo "Reader mode" links; don't confuse them with our .xfr-launch button.
 
 ## UI DETAILS (current, v0.7.2)
@@ -137,7 +137,8 @@ v0.3.0 threadmark gate + site font. v0.4.0 precompute/skeletons/bg-reload. v0.5.
 v0.6.0 two view modes + footer nav + light-mode fix + sticky full-width discbar. v0.6.1
 always-auto-load discussion. v0.7.0 refactor (Net/Adapter/Cache/Store) + whole-story EPUB
 export. v0.7.1 icon footer + tooltips + green EPUB button moved into footer. v0.7.2 sticky
-discussion bar repositioned below story (scroll-up/pin/release).
+discussion bar repositioned below story (scroll-up/pin/release). v0.7.3 launcher moved to
+bottom-left + drag-to-move with persisted position.
 
 ## ROADMAP (agreed next)
 1. In-chapter scroll progress + read/unread state.

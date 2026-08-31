@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         XenForo Story Reader (AO3-style)
 // @namespace    xfreader.local
-// @version      0.7.2
+// @version      0.7.3
 // @description  Reformats threadmarked XenForo story threads into an AO3-style reader: chapter TOC, inline discussion, persistent cache, EPUB export.
 // @author       elfensky
 // @homepageURL  https://github.com/elfensky/xenforo-story-reader
@@ -389,9 +389,16 @@ function mountLauncher(){
   const btn=document.createElement('button');
   btn.className='xfr-launch';
   btn.textContent='\uD83D\uDCD6 Reader';
-  const s=document.createElement('style'); s.textContent='.xfr-launch{position:fixed;right:16px;bottom:16px;z-index:2147482000;padding:10px 16px;border-radius:24px;border:none;background:#5b9;color:#fff;font:600 14px '+SITE_FONT+';cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.3);}';
+  const s=document.createElement('style'); s.textContent='.xfr-launch{position:fixed;left:16px;bottom:16px;z-index:2147482000;padding:10px 16px;border-radius:24px;border:none;background:#5b9;color:#fff;font:600 14px '+SITE_FONT+';cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.3);touch-action:none;}';
   document.head.appendChild(s);
-  btn.onclick=()=>{ if(!document.querySelector('qq-reader')) document.body.appendChild(document.createElement('qq-reader')); };
+  /* bottom-left by default (bottom-right sat on cookie-banner close buttons); drag to move, position persisted */
+  try{ const p=JSON.parse(localStorage.getItem(LS_PREFIX+'launch')||'null');
+    if(p){ btn.style.left=Math.max(0,Math.min(p.l,innerWidth-80))+'px'; btn.style.bottom=Math.max(0,Math.min(p.b,innerHeight-48))+'px'; } }catch(e){}
+  let drag=null, moved=false;
+  btn.onpointerdown=e=>{ drag={x:e.clientX,y:e.clientY,l:btn.offsetLeft,b:parseFloat(getComputedStyle(btn).bottom)}; moved=false; try{btn.setPointerCapture(e.pointerId);}catch(err){} };
+  btn.onpointermove=e=>{ if(!drag) return; const dx=e.clientX-drag.x, dy=e.clientY-drag.y; if(Math.abs(dx)+Math.abs(dy)>4) moved=true; if(!moved) return; btn.style.left=Math.max(0,Math.min(drag.l+dx,innerWidth-btn.offsetWidth))+'px'; btn.style.bottom=Math.max(0,Math.min(drag.b-dy,innerHeight-btn.offsetHeight))+'px'; };
+  btn.onpointerup=()=>{ if(drag&&moved) localStorage.setItem(LS_PREFIX+'launch',JSON.stringify({l:btn.offsetLeft,b:parseFloat(getComputedStyle(btn).bottom)})); drag=null; };
+  btn.onclick=()=>{ if(moved){ moved=false; return; } if(!document.querySelector('qq-reader')) document.body.appendChild(document.createElement('qq-reader')); };
   document.body.appendChild(btn);
 }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',mountLauncher);
