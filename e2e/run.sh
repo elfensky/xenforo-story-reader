@@ -9,7 +9,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 THREAD="${E2E_THREAD:-https://forums.spacebattles.com/threads/here-comes-the-new-boss-nothing-like-the-old-boss-worm-au.853195/}"
-CD() { mise x node@24 -- chrome-devtools "$@" 2>/dev/null; }
+CD() { mise x node@26 -- chrome-devtools "$@" 2>/dev/null; }
 
 fail() { echo "FAIL: $1" >&2; exit 1; }
 
