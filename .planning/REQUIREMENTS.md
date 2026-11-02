@@ -109,12 +109,33 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
+| STAB-01 | Phase 1 | Pending |
+| STAB-02 | Phase 1 | Pending |
+| KEY-01 | Phase 2 | Pending |
+| KEY-02 | Phase 2 | Pending |
+| KEY-03 | Phase 2 | Pending |
+| KEY-04 | Phase 2 | Pending |
+| KEY-05 | Phase 2 | Pending |
+| KEY-06 | Phase 2 | Pending |
+| PROG-01 | Phase 1 | Pending |
+| PROG-02 | Phase 1 | Pending |
+| PROG-03 | Phase 1 | Pending |
+| PROG-04 | Phase 1 | Pending |
+| PROG-05 | Phase 1 | Pending |
+| TOC-01 | Phase 2 | Pending |
+| TOC-02 | Phase 2 | Pending |
+| TOC-03 | Phase 2 | Pending |
+| TYPO-01 | Phase 3 | Pending |
+| TYPO-02 | Phase 3 | Pending |
+| TYPO-03 | Phase 3 | Pending |
+| TYPO-04 | Phase 3 | Pending |
+| SHIP-01 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 21 total
-- Mapped to phases: 0
-- Unmapped: 21 ⚠️
+- Mapped to phases: 21
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-11-02*
-*Last updated: 2026-11-02 after initial definition*
+*Last updated: 2026-11-02 after roadmap creation (traceability filled)*
