@@ -8,6 +8,5 @@ node_modules/
 .planning/milestone.lock
 .planning/research/.cache/
 .planning/intel/
-.planning/debug/
 .planning/ui-reviews/
 .playwright-mcp/
