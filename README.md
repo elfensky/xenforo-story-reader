@@ -43,9 +43,8 @@ Updates ship through the script's `@updateURL`, so installs stay current automat
 
 ## Roadmap
 
-1. In-chapter scroll progress + read/unread state.
-2. Keyboard nav (J/K, arrows, Esc).
-3. TOC search/filter; typography controls (font size / width / line-height).
+The roadmap lives in [.planning/ROADMAP.md](.planning/ROADMAP.md) (GSD). Next up: v0.8 — reading
+comfort (scroll progress and read state, keyboard navigation, TOC filter and typography).
 
 ## Development
 
