@@ -97,7 +97,7 @@ Notes on the layout:
 
 **Documentation:**
 - `README.md`: install, features, development commands.
-- `CONTEXT.md`: architecture summary, selectors, constants, version history, roadmap.
+- `CONTEXT.md`: architecture summary, selectors, constants, version history, and a pointer to `.planning/ROADMAP.md`.
 - `AGENTS.md`: worktree and PR workflow.
 - `CLAUDE.md`: Claude Code instructions. Content matches `AGENTS.md`.
 
