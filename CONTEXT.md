@@ -141,8 +141,7 @@ discussion bar repositioned below story (scroll-up/pin/release). v0.7.3 launcher
 bottom-left + drag-to-move with persisted position. v0.7.4 test harness (vitest unit+smoke,
 CDP e2e, CI) + inert test hook exposing internals.
 
-## ROADMAP (agreed next)
-1. In-chapter scroll progress + read/unread state.
-2. Keyboard nav (J/K, arrows, Esc).
-3. TOC search/filter; typography controls (font size / width / line-height).
+## ROADMAP
+The one roadmap is `.planning/ROADMAP.md` (GSD); requirements and scope are in
+`.planning/REQUIREMENTS.md`.
 Recommended NOT to do: nested comment threading, any account-touching features.
